@@ -91,7 +91,7 @@ class OnboardingScreen extends StatelessWidget {
   final String title;
   final String description;
 
-  OnboardingScreen({super.key,
+  const OnboardingScreen({super.key,
     required this.imagePath,
     required this.title,
     required this.description,
