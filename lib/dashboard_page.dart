@@ -7,7 +7,7 @@ class DashboardPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Dashboard'),
+        title: const Text('Dashboard'),
         centerTitle: true,
       ),
       body: SingleChildScrollView(
@@ -24,15 +24,15 @@ class DashboardPage extends StatelessWidget {
                 _buildSummaryCard('Expenses', '\$2,100', Icons.money_off),
               ],
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             // Budget Overview
             _buildSectionTitle('Budget Overview'),
             _buildBudgetOverview(),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             // Recent Transactions
             _buildSectionTitle('Recent Transactions'),
             _buildRecentTransactions(),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             // Quick Actions
             _buildSectionTitle('Quick Actions'),
             _buildQuickActions(context),
@@ -51,10 +51,10 @@ class DashboardPage extends StatelessWidget {
         child: Column(
           children: [
             Icon(icon, size: 40, color: Colors.blue),
-            SizedBox(height: 10),
-            Text(title, style: TextStyle(fontSize: 18)),
-            SizedBox(height: 5),
-            Text(amount, style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
+            const SizedBox(height: 10),
+            Text(title, style: const TextStyle(fontSize: 18)),
+            const SizedBox(height: 5),
+            Text(amount, style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
           ],
         ),
       ),
@@ -64,7 +64,7 @@ class DashboardPage extends StatelessWidget {
   Widget _buildSectionTitle(String title) {
     return Text(
       title,
-      style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+      style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
     );
   }
 
@@ -74,7 +74,7 @@ class DashboardPage extends StatelessWidget {
       height: 150,
       color: Colors.blue[50], // Replace with a chart or progress bars
       alignment: Alignment.center,
-      child: Text('Budget Overview Placeholder'),
+      child: const Text('Budget Overview Placeholder'),
     );
   }
 
@@ -92,10 +92,10 @@ class DashboardPage extends StatelessWidget {
 
   Widget _buildTransactionItem(String title, String amount, String date) {
     return ListTile(
-      leading: Icon(Icons.receipt, size: 30),
+      leading: const Icon(Icons.receipt, size: 30),
       title: Text(title),
       subtitle: Text(date),
-      trailing: Text(amount, style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+      trailing: Text(amount, style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
     );
   }
 
@@ -107,15 +107,15 @@ class DashboardPage extends StatelessWidget {
           onPressed: () {
             // Navigate to add transaction page
           },
-          icon: Icon(Icons.add),
-          label: Text('Add Transaction'),
+          icon: const Icon(Icons.add),
+          label: const Text('Add Transaction'),
         ),
         ElevatedButton.icon(
           onPressed: () {
             // Navigate to reports page
           },
-          icon: Icon(Icons.pie_chart),
-          label: Text('View Reports'),
+          icon: const Icon(Icons.pie_chart),
+          label: const Text('View Reports'),
         ),
       ],
     );
