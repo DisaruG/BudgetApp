@@ -3,6 +3,7 @@ class Assets {
   Assets._();
 
   static const String assetsBudgetplan = 'lib/assets/budgetplan.png';
+  static const String assetsSteal = 'lib/assets/steal.png';
   static const String assetsTrackexpense = 'lib/assets/trackexpense.png';
   static const String generatedAssets = 'lib/generated/assets.dart';
   static const String libMain = 'lib/main.dart';

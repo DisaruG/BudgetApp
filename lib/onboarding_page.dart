@@ -23,7 +23,7 @@ class OnboardingPageState extends State<OnboardingPage> {
       description: 'Create budget goals to help you save money and avoid overspending.',
     ),
     const OnboardingScreen(
-      imagePath: 'assets/onboarding3.png',
+      imagePath: 'lib/assets/steal.png',
       title: 'Secure and Private',
       description: 'Your data is secure with industry-standard encryption and privacy measures.',
     ),
