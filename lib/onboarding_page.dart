@@ -13,12 +13,12 @@ class OnboardingPageState extends State<OnboardingPage> {
 
   final List<Widget> _onboardingPages = [
     const OnboardingScreen(
-      imagePath: 'assets/onboarding1.png', // Add your image assets
+      imagePath: 'lib/assets/trackexpense.png', // Add your image assets
       title: 'Track Your Expenses',
       description: 'Easily keep track of where your money goes with detailed reports and insights.',
     ),
     const OnboardingScreen(
-      imagePath: 'assets/onboarding2.png',
+      imagePath: 'lib/assets/budgetplan.png',
       title: 'Set Budget Goals',
       description: 'Create budget goals to help you save money and avoid overspending.',
     ),
