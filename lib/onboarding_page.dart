@@ -65,7 +65,7 @@ class OnboardingPageState extends State<OnboardingPage> {
                 onPressed: () {
                   // Navigate to the next page (login or main app)
                 },
-                child: Text('Get Started'),
+                child: const Text('Get Started'),
               ),
             ),
         ],
@@ -75,7 +75,7 @@ class OnboardingPageState extends State<OnboardingPage> {
 
   Widget _buildDot(int index) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 5),
+      margin: const EdgeInsets.symmetric(horizontal: 5),
       height: 10,
       width: 10,
       decoration: BoxDecoration(
@@ -105,16 +105,16 @@ class OnboardingScreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Image.asset(imagePath),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           Text(
             title,
-            style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
           ),
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
           Text(
             description,
             textAlign: TextAlign.center,
-            style: TextStyle(fontSize: 16),
+            style: const TextStyle(fontSize: 16),
           ),
         ],
       ),
