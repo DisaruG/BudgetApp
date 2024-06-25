@@ -1,3 +1,4 @@
+import 'package:budget/dashboard_page.dart';
 import 'package:flutter/material.dart';
 
 class OnboardingPage extends StatefulWidget {
@@ -63,6 +64,10 @@ class OnboardingPageState extends State<OnboardingPage> {
               right: 20,
               child: ElevatedButton(
                 onPressed: () {
+                  Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const DashboardPage()));
                   // Navigate to the next page (login or main app)
                 },
                 child: const Text('Get Started'),

@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class DashboardPage extends StatelessWidget {
@@ -19,9 +20,9 @@ class DashboardPage extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                _buildSummaryCard('Total Balance', '\$12,345', Icons.account_balance),
-                _buildSummaryCard('Income', '\$3,500', Icons.attach_money),
-                _buildSummaryCard('Expenses', '\$2,100', Icons.money_off),
+                _buildSummaryCard('Total Balance', '\$12,345', CupertinoIcons.money_dollar),
+                _buildSummaryCard('Income', '\$3,500', CupertinoIcons.arrow_up_right_circle),
+                _buildSummaryCard('Expenses', '\$2,100', CupertinoIcons.arrow_down_right_circle),
               ],
             ),
             const SizedBox(height: 20),
@@ -92,7 +93,7 @@ class DashboardPage extends StatelessWidget {
 
   Widget _buildTransactionItem(String title, String amount, String date) {
     return ListTile(
-      leading: const Icon(Icons.receipt, size: 30),
+      leading: const Icon(CupertinoIcons.cart, size: 30),
       title: Text(title),
       subtitle: Text(date),
       trailing: Text(amount, style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
@@ -107,14 +108,14 @@ class DashboardPage extends StatelessWidget {
           onPressed: () {
             // Navigate to add transaction page
           },
-          icon: const Icon(Icons.add),
+          icon: const Icon(CupertinoIcons.add_circled),
           label: const Text('Add Transaction'),
         ),
         ElevatedButton.icon(
           onPressed: () {
             // Navigate to reports page
           },
-          icon: const Icon(Icons.pie_chart),
+          icon: const Icon(CupertinoIcons.chart_pie),
           label: const Text('View Reports'),
         ),
       ],
@@ -125,15 +126,15 @@ class DashboardPage extends StatelessWidget {
     return BottomNavigationBar(
       items: const <BottomNavigationBarItem>[
         BottomNavigationBarItem(
-          icon: Icon(Icons.home),
+          icon: Icon(CupertinoIcons.home),
           label: 'Dashboard',
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.account_balance_wallet),
+          icon: Icon(CupertinoIcons.creditcard),
           label: 'Accounts',
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.settings),
+          icon: Icon(CupertinoIcons.settings),
           label: 'Settings',
         ),
       ],
@@ -145,3 +146,4 @@ class DashboardPage extends StatelessWidget {
     );
   }
 }
+
