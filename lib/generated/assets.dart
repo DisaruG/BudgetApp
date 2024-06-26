@@ -8,6 +8,5 @@ class Assets {
   static const String generatedAssets = 'lib/generated/assets.dart';
   static const String libMain = 'lib/main.dart';
   static const String libOnboardingPage = 'lib/onboarding_page.dart';
-  static const String libSalleryAllocationPage = 'lib/sallery_allocation_page.dart';
 
 }
