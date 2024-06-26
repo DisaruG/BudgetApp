@@ -6,7 +6,9 @@ class Assets {
   static const String assetsSteal = 'lib/assets/steal.png';
   static const String assetsTrackexpense = 'lib/assets/trackexpense.png';
   static const String generatedAssets = 'lib/generated/assets.dart';
+  static const String libCategorySelectionPage = 'lib/category_selection_page.dart';
   static const String libMain = 'lib/main.dart';
   static const String libOnboardingPage = 'lib/onboarding_page.dart';
+  static const String libSalaryInputPage = 'lib/salary_input_page.dart';
 
 }
