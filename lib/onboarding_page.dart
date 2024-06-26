@@ -1,4 +1,4 @@
-import 'package:budget/dashboard_page.dart';
+import 'package:budget/sallery_allocation_page.dart';
 import 'package:flutter/material.dart';
 
 class OnboardingPage extends StatefulWidget {
@@ -67,7 +67,7 @@ class OnboardingPageState extends State<OnboardingPage> {
                   Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const DashboardPage()));
+                          builder: (context) => const SalaryAllocationPage()));
                   // Navigate to the next page (login or main app)
                 },
                 child: const Text('Get Started'),
