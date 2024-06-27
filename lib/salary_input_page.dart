@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'category_selection_page.dart';
 
 class SalaryInputPage extends StatefulWidget {
@@ -47,6 +46,33 @@ class SalaryInputPageState extends State<SalaryInputPage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            // Income Display Card
+            SizedBox(
+              width: double.infinity,
+              height: 150, // Adjust the height as needed
+              child: Card(
+                elevation: 4.0,
+                child: Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text(
+                        'Monthly Income',
+                        style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                      ),
+                      const SizedBox(height: 10),
+                      Text(
+                        '\$$_salary', // Display the formatted salary here
+                        style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            const SizedBox(height: 20),
+
             // Salary Input
             TextField(
               keyboardType: TextInputType.number,
@@ -58,12 +84,14 @@ class SalaryInputPageState extends State<SalaryInputPage> {
               onChanged: _onSalaryChanged,
             ),
             const SizedBox(height: 20),
+
             // Category Selection Button
             ElevatedButton(
               onPressed: _navigateToCategorySelection,
               child: const Text('Select Areas to Spend'),
             ),
             const SizedBox(height: 20),
+
             // Display Selected Categories
             if (_selectedCategories.isNotEmpty) ...[
               const Text('Selected Areas:', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
@@ -80,3 +108,5 @@ class SalaryInputPageState extends State<SalaryInputPage> {
     );
   }
 }
+
+
