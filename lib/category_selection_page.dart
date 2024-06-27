@@ -18,7 +18,8 @@ class CategorySelectionPageState extends State<CategorySelectionPage> {
     Category(name: 'Food', icon: Icons.fastfood),
     Category(name: 'Health', icon: Icons.health_and_safety),
     Category(name: 'Education', icon: Icons.school),
-    Category(name: 'Adult', icon: Icons.no_adult_content),
+    Category(name: 'Beauty', icon: Icons.brush),
+    Category(name: 'Social', icon: Icons.group),
   ];
 
   late List<String> _selectedCategories;
