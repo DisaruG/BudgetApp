@@ -10,8 +10,16 @@ class CategorySelectionPage extends StatefulWidget {
 }
 
 class CategorySelectionPageState extends State<CategorySelectionPage> {
-  // List of available categories
-  final List<String> _allCategories = ['Travel', 'Shopping', 'Entertainment', 'Dining', 'Health', 'Education'];
+  // List of available categories with icons
+  final List<Category> _allCategories = const [
+    Category(name: 'Travel', icon: Icons.airplanemode_active),
+    Category(name: 'Shopping', icon: Icons.shopping_cart),
+    Category(name: 'Entertainment', icon: Icons.movie),
+    Category(name: 'Dining', icon: Icons.restaurant),
+    Category(name: 'Health', icon: Icons.health_and_safety),
+    Category(name: 'Education', icon: Icons.school),
+  ];
+
   late List<String> _selectedCategories;
 
   @override
@@ -20,12 +28,12 @@ class CategorySelectionPageState extends State<CategorySelectionPage> {
     _selectedCategories = List.from(widget.selectedCategories);
   }
 
-  void _onCategorySelected(bool? selected, String category) {
+  void _onCategoryTap(Category category) {
     setState(() {
-      if (selected == true) {
-        _selectedCategories.add(category);
+      if (_selectedCategories.contains(category.name)) {
+        _selectedCategories.remove(category.name);
       } else {
-        _selectedCategories.remove(category);
+        _selectedCategories.add(category.name);
       }
     });
   }
@@ -46,16 +54,41 @@ class CategorySelectionPageState extends State<CategorySelectionPage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // List of categories with checkboxes
+            // Grid of categories with icons and names
             Expanded(
-              child: ListView(
-                children: _allCategories.map((category) {
-                  return CheckboxListTile(
-                    title: Text(category),
-                    value: _selectedCategories.contains(category),
-                    onChanged: (selected) => _onCategorySelected(selected, category),
+              child: GridView.builder(
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 3, // Number of items in a row
+                  mainAxisSpacing: 10,
+                  crossAxisSpacing: 10,
+                  childAspectRatio: 1,
+                ),
+                itemCount: _allCategories.length,
+                itemBuilder: (context, index) {
+                  final category = _allCategories[index];
+                  final isSelected = _selectedCategories.contains(category.name);
+                  return GestureDetector(
+                    onTap: () => _onCategoryTap(category),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: isSelected ? Colors.blue : Colors.grey[800],
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(category.icon, color: Colors.white, size: 30),
+                          const SizedBox(height: 10),
+                          Text(
+                            category.name,
+                            textAlign: TextAlign.center,
+                            style: const TextStyle(color: Colors.white, fontSize: 14),
+                          ),
+                        ],
+                      ),
+                    ),
                   );
-                }).toList(),
+                },
               ),
             ),
             const SizedBox(height: 20),
@@ -70,3 +103,12 @@ class CategorySelectionPageState extends State<CategorySelectionPage> {
     );
   }
 }
+
+// Define Category Model
+class Category {
+  final String name;
+  final IconData icon;
+
+  const Category({required this.name, required this.icon});
+}
+

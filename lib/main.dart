@@ -11,9 +11,10 @@ class BudgetApp extends StatelessWidget {
     return MaterialApp(
       title: 'Budget App',
       theme: ThemeData(
+        brightness: Brightness.dark,
         primarySwatch: Colors.blue,
       ),
-      home: OnboardingPage(),
+      home: const OnboardingPage(),
     );
   }
 }
