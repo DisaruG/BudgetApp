@@ -94,10 +94,24 @@ class CategorySelectionPageState extends State<CategorySelectionPage> {
               ),
             ),
             const SizedBox(height: 20),
-            // Done Button
-            ElevatedButton(
-              onPressed: _onDone,
-              child: const Text('Done'),
+            // Larger Done Button
+            SizedBox(
+              width: double.infinity, // Full width of the parent
+              height: 60, // Height of the button
+              child: ElevatedButton(
+                onPressed: _onDone,
+                style: ElevatedButton.styleFrom(
+                  foregroundColor: Colors.white, backgroundColor: Colors.blue, // Text color
+                  textStyle: const TextStyle(
+                    fontSize: 20, // Increase font size
+                    fontWeight: FontWeight.bold, // Bold text
+                  ),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12), // Rounded corners
+                  ),
+                ),
+                child: const Text('Done'),
+              ),
             ),
           ],
         ),
@@ -113,4 +127,5 @@ class Category {
 
   const Category({required this.name, required this.icon});
 }
+
 
