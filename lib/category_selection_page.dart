@@ -15,9 +15,10 @@ class CategorySelectionPageState extends State<CategorySelectionPage> {
     Category(name: 'Travel', icon: Icons.airplanemode_active),
     Category(name: 'Shopping', icon: Icons.shopping_cart),
     Category(name: 'Entertainment', icon: Icons.movie),
-    Category(name: 'Dining', icon: Icons.restaurant),
+    Category(name: 'Food', icon: Icons.fastfood),
     Category(name: 'Health', icon: Icons.health_and_safety),
     Category(name: 'Education', icon: Icons.school),
+    Category(name: 'Adult', icon: Icons.no_adult_content),
   ];
 
   late List<String> _selectedCategories;
