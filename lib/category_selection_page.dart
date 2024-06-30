@@ -14,8 +14,8 @@ class CategorySelectionPageState extends State<CategorySelectionPage> {
   final List<Category> _allCategories = const [
     Category(name: 'Travel', icon: Icons.airplanemode_active), // Icon with travel
     Category(name: 'Shopping', icon: Icons.shopping_cart), // Icon with shopping
-    Category(name: 'Entertainment', icon: Icons.movie), // Icon with Entertainment 
-    Category(name: 'Food', icon: Icons.fastfood),
+    Category(name: 'Entertainment', icon: Icons.movie), // Icon with Entertainment
+    Category(name: 'Food', icon: Icons.fastfood), // Icon with fast food
     Category(name: 'Health', icon: Icons.health_and_safety),
     Category(name: 'Education', icon: Icons.school),
     Category(name: 'Beauty', icon: Icons.brush),
