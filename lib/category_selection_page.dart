@@ -16,8 +16,8 @@ class CategorySelectionPageState extends State<CategorySelectionPage> {
     Category(name: 'Shopping', icon: Icons.shopping_cart), // Icon with shopping
     Category(name: 'Entertainment', icon: Icons.movie), // Icon with Entertainment
     Category(name: 'Food', icon: Icons.fastfood), // Icon with fast food
-    Category(name: 'Health', icon: Icons.health_and_safety),
-    Category(name: 'Education', icon: Icons.school),
+    Category(name: 'Health', icon: Icons.health_and_safety), // Icon with health
+    Category(name: 'Education', icon: Icons.school), // I
     Category(name: 'Beauty', icon: Icons.brush),
     Category(name: 'Social', icon: Icons.group),
   ];
