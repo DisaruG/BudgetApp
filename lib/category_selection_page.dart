@@ -12,8 +12,8 @@ class CategorySelectionPage extends StatefulWidget {
 class CategorySelectionPageState extends State<CategorySelectionPage> {
   // List of available categories with icons
   final List<Category> _allCategories = const [
-    Category(name: 'Travel', icon: Icons.airplanemode_active),
-    Category(name: 'Shopping', icon: Icons.shopping_cart),
+    Category(name: 'Travel', icon: Icons.airplanemode_active), // Icon with travel
+    Category(name: 'Shopping', icon: Icons.shopping_cart), // 
     Category(name: 'Entertainment', icon: Icons.movie),
     Category(name: 'Food', icon: Icons.fastfood),
     Category(name: 'Health', icon: Icons.health_and_safety),
